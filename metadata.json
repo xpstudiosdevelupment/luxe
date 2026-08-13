@@ -1,0 +1,6 @@
+{
+  "name": "Luxe Golf",
+  "description": "Luxe Golf - Lethbridge's premier indoor golf simulator venue with private rooms, open bays, swing analysis, food, and drinks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

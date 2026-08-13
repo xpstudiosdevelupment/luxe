@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Gentle infinite floating levitation keyframe */
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0.5deg);
+    }
+  }
+
+  @keyframes floatReverse {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(8px) rotate(-0.5deg);
+    }
+  }
+
+  @keyframes floatGentle {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Custom Utility Classes */
+  .animate-float-slow {
+    animation: floatSlow 5s ease-in-out infinite;
+  }
+
+  .animate-float-reverse {
+    animation: floatReverse 6s ease-in-out infinite;
+  }
+
+  .animate-float-gentle {
+    animation: floatGentle 4s ease-in-out infinite;
+  }
+
+  /* Universal hover float elevation */
+  .hover-float {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  }
+
+  .hover-float:hover {
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 20px 35px -10px rgba(197, 160, 89, 0.18), 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .hover-float-sm {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  }
+
+  .hover-float-sm:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px -8px rgba(197, 160, 89, 0.2);
+  }
+}
+
+/* Ensure smooth scrolling html */
+html {
+  scroll-behavior: smooth;
+}
